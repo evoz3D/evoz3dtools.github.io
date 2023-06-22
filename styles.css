@@ -1,0 +1,60 @@
+html {
+  background-color: #023047;
+}
+
+body {
+  background-color: #ffffff;
+  color: #023047;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 10px solid #219EBC;
+}
+
+h1 {
+  color: #fb8500;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+}
+
+select,
+input[type="number"] {
+  width: 200px;
+  padding: 5px;
+}
+
+#note {
+  color: #219ebc;
+  margin-bottom: 10px;
+}
+
+#results {
+  margin-top: 20px;
+}
+
+#results h2 {
+  color: #fb8500;
+  margin-bottom: 10px;
+}
+
+#info {
+  background-color: #fb8500;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+  width: 500px;
+  padding: 5px;
+}
