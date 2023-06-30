@@ -80,7 +80,7 @@ function mostrarDriver() {
     imagenDriver.style.display = "none";
   } else if (driverSelect.value === "A4988") {
     imagenDriver.style.display = "block";
-    imagenDriver.src = "./.img/driver_ a4988.png";
+    imagenDriver.src = "https://github.com/evoz3D/evoz3dtools.github.io/blob/main/.img/driver_%20a4988.png?raw=true";
   } else if (driverSelect.value === "DRV8825") {
     imagenDriver.style.display = "block";
     imagenDriver.src = "./.img/driver_drv8825.png";
