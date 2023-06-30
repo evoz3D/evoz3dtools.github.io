@@ -83,12 +83,12 @@ function mostrarDriver() {
     imagenDriver.src = "https://github.com/evoz3D/evoz3dtools.github.io/blob/main/.img/driver_%20a4988.png?raw=true";
   } else if (driverSelect.value === "DRV8825") {
     imagenDriver.style.display = "block";
-    imagenDriver.src = "./.img/driver_drv8825.png";
+    imagenDriver.src = "https://github.com/evoz3D/evoz3dtools.github.io/blob/main/.img/driver_drv8825.PNG?raw=true";
   } else if (driverSelect.value === "TMC2208") {
     imagenDriver.style.display = "block";
-    imagenDriver.src = ".img/driver_tmc2208.png";
+    imagenDriver.src = "https://github.com/evoz3D/evoz3dtools.github.io/blob/main/.img/driver_tmc2208.PNG";
   } else if (driverSelect.value === "TMC2209") {
     imagenDriver.style.display = "block";
-    imagenDriver.src = ".img/driver_tmc2209.png";
+    imagenDriver.src = "https://github.com/evoz3D/evoz3dtools.github.io/blob/main/.img/driver_tmc2209.PNG?raw=true";
   }
 }
