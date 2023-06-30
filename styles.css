@@ -1,3 +1,19 @@
+/*
+Estilos de CSS
+estructura
+selector{
+  propiedad:valor;
+  propiedad:valor;
+  propiedad:valor;
+  ...
+  #023047
+  #219EBC
+  #fb8500
+}
+*/
+
+/* ///////// Estructura ///////// */
+
 html {
   background-color: #023047;
 }
@@ -7,13 +23,19 @@ body {
   color: #023047;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   width: 600px;
+  height: auto;
   margin: 0 auto;
   padding: 20px;
   border: 10px solid #219EBC;
 }
 
+p {
+  color: #023047;
+}
+
 h1 {
   color: #fb8500;
+  text-align: center;
 }
 
 div {
@@ -21,6 +43,7 @@ div {
 }
 
 label {
+  color: #023047;
   display: inline-block;
   width: 200px;
 }
@@ -33,11 +56,14 @@ input[type="number"] {
 
 #note {
   color: #219ebc;
-  margin-bottom: 10px;
 }
 
 #results {
   margin-top: 20px;
+  background-image: url(https://1300988408-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FBx3bO7lNubgzUdautmYB%2Fuploads%2Fgit-blob-cd27ca5c8cc23fe8af4dc706a1a657b2192cadb2%2FEVOZ%203D%20753x400.png?alt=media);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 150px 80px;
 }
 
 #results h2 {
@@ -52,9 +78,84 @@ input[type="number"] {
   border-radius: 10px;
 }
 
+.clearfix {
+  clear: both;
+}
+
+/* ///////// Estructura ///////// */
+
+
+/* ///////// Imagenes ///////// */
+
 img {
   margin: 0 auto;
   display: block;
   width: 500px;
   padding: 5px;
 }
+
+#imagen-driver {
+  float: right;
+  max-width: 25%;
+  height: auto;
+}
+
+/* ///////// Imagenes ///////// */
+
+
+/* ///////// Navegación ///////// */
+nav {
+  background-color: #023047;
+  border-radius: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #fb8500;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #023047;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  display: block;
+  text-decoration: none;;
+}
+
+.dropdown-content a:hover {
+  background-color: #fb8500;
+  padding: 10px;
+}
+
+nav li:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* ///////// Navegación ///////// */
