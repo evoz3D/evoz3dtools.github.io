@@ -80,10 +80,10 @@ function mostrarDriver() {
     imagenDriver.style.display = "none";
   } else if (driverSelect.value === "A4988") {
     imagenDriver.style.display = "block";
-    imagenDriver.src = ".img/driver_ a4988.png";
+    imagenDriver.src = "./.img/driver_ a4988.png";
   } else if (driverSelect.value === "DRV8825") {
     imagenDriver.style.display = "block";
-    imagenDriver.src = ".img/driver_drv8825.png";
+    imagenDriver.src = "./.img/driver_drv8825.png";
   } else if (driverSelect.value === "TMC2208") {
     imagenDriver.style.display = "block";
     imagenDriver.src = ".img/driver_tmc2208.png";
