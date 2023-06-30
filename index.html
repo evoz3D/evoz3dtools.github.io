@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDZEJK7Y9P"></script>
   <script>
+
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
@@ -11,10 +13,10 @@
     gtag('config', 'G-VDZEJK7Y9P');
   </script>
 
+
   <meta charset="utf-8">
   <meta name="description"
-    content="evoz3D Costa Rica - Impresión 3D, Ingeniería, Diseño 3D, Ajustes, Calibración y Modificaciones" meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;
-    >
+    content="evoz3D Costa Rica - Impresión 3D, Ingeniería, Diseño 3D, Ajustes, Calibración y Modificaciones">
 
   <title>evoz3D TOOLS</title>
   <link rel="preload" as="image"
@@ -22,77 +24,89 @@
 
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
+
 <body>
-  <h1>Calculadora de Drivers</h1>
   
-<br><br>
+  <footer>
+    <h5>2023 omonge22, <strong>PURA VIDA!!!</strong></h5>
+  </footer>
 
-  <div>
-    <label for="driver-select">Selecciona un driver:</label>
-    <select id="driver-select" onchange="showNote(),calculate()">
-      <option value="0">--Seleccione--</option>
-	  <option value="A4988">A4988</option>
-      <option value="DRV8825">DRV8825</option>
-      <option value="TMC2208">TMC2208</option>
-      <option value="TMC2209">TMC2209</option>
-      <option value="TMC2XXX">TMC2XXX</option>
-    </select>
-  </div>
-  
-  <Strong>
-  <div id="note"></div>
-  </Strong>
-  
-  <div id="rs-select" style="display: none;">
-    <label for="rs">Selecciona el valor de RS:</label>
-    <select id="rs" onchange="calculate()">
-      <option value="0">--Seleccione--</option>
-	  <option value="0.05">0.05</option>
-      <option value="0.1">0.1</option>
-      <option value="0.2">0.2</option>
-    </select>
-  </div>
-  
-  <div>
-    <label for="security-percentage">Porcentaje de seguridad (80~90%):</label>
-    <input type="number" id="security-percentage" min="80" max="90" onchange="calculate()" />
-  </div>
-  
-  <div>
-    <label for="motor-current">Corriente nominal del motor:</label>
-    <input type="number" id="motor-current" step="0.1" onchange="calculate()" />
-  </div>
-  
+
+  <br><br>
+
+  <form>
+
+    <h1>Calculadora de Drivers</h1>
+
+    <br><br>
+
+    <div>
+      <label for="driver-select">Selecciona un driver:</label>
+      <select id="driver-select" onchange="mostrarDriver(),showNote(),calculate()">
+        <option value="--Seleccione--">--Seleccione--</option>
+        <option value="A4988">A4988</option>
+        <option value="DRV8825">DRV8825</option>
+        <option value="TMC2208">TMC2208</option>
+        <option value="TMC2209">TMC2209</option>
+        <option value="TMC2XXX">TMC2XXX</option>
+      </select>
+    </div>
+
+    <img id="imagen-driver" src=".img/driver_a4988.png" alt="driver seleccionado" style="display: none">
+
+    <Strong>
+      <div id="note"></div>
+    </Strong>
+
+    <div id="rs-select" style="display: none;">
+      <label for="rs">Selecciona el valor de RS:</label>
+      <select id="rs" onchange="calculate()">
+        <option value="0">--Seleccione--</option>
+        <option value="0.05">0.05</option>
+        <option value="0.1">0.1</option>
+        <option value="0.2">0.2</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="security-percentage">Porcentaje de seguridad:</label>
+      <input type="number" id="security-percentage" placeholder="recomendado 80~90%" min="80" max="90"
+        onchange="calculate()" />
+    </div>
+
+    <div>
+      <label for="motor-current">Corriente nominal del motor:</label>
+      <input type="number" id="motor-current" step="0.1" placeholder="según Datasheet" onchange="calculate()" />
+    </div>
+  </form>
+  <br>
   <div id="results">
-  <Strong>
-    <h2>Resultados</h2>
-<br>
-    <p>Driver seleccionado: <span id="driver-selected"></span></p>
-<br>
-    <p>Resistencia de sensado (RS): <span id="rs-value"></span></p>
-<br>
-    <p>Voltaje de Referencia (VRef): <span id="vref"></span></p>
-<br>
-    <p>Corriente Máx. del Driver: <span id="driver-current"></span></p>
-<br>
-    <p id="irms-container" style="display: none;">Corriente RMS (IRMS): <span id="irms"></span></p>
-<br>
-	</Strong>
-
+    <Strong>
+      <h2>Resultados</h2>
+      <p>Driver seleccionado: <span id="driver-selected"></span></p>
+      <p>Corriente Máx. del Driver: <span id="driver-current"></span></p>
+      <p>Resistencia de sensado (RS): <span id="rs-value"></span></p>
+      <p>Voltaje de Referencia (VRef): <span id="vref"></span></p>
+      <p>Corriente Maxima de Trabajo: <span id="I-maxMotor"></span></p>
+      <p id="irms-container" style="display: none;">Corriente RMS (IRMS): <span id="irms"></span></p>
+    </Strong>
   </div>
-  
+
+  <br><br>
+
+  <p id="info">Para mas información puedes consultar la documentación de <a target="_blanck"
+      href="https://reprap.org/wiki/A4988_vs_DRV8825_Chinese_Stepper_Driver_Boards#Comparison_table">
+      <Strong>REPRAP</Strong></a>, así como la documentación que provee <a target="_blanck"
+      href="https://e3d-online.zendesk.com/hc/en-us/article_attachments/4402942989841/Hemera_Current_Adjustments.pdf"><Strong>E3D</Strong></a>
+    para el ajuste de corriente para su extrusor HEMERA</p>
 
 
-<img alt="Logo evoz3D" src="https://1300988408-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FBx3bO7lNubgzUdautmYB%2Fuploads%2Fgit-blob-cd27ca5c8cc23fe8af4dc706a1a657b2192cadb2%2FEVOZ%203D%20753x400.png?alt=media">
-  
-<br><br>
 
 
-	<p id="info">Para mas información puedes consultar la documentación de <a target="_blanck" href="https://reprap.org/wiki/A4988_vs_DRV8825_Chinese_Stepper_Driver_Boards#Comparison_table"> <Strong>REPRAP</Strong></a>, así como la documentación que provee <a target="_blanck" href="https://e3d-online.zendesk.com/hc/en-us/article_attachments/4402942989841/Hemera_Current_Adjustments.pdf"><Strong>E3D</Strong></a> para el ajuste de corriente para su extrusor HEMERA</p>
 
-
-	
-  
-  <script src="script.js"></script>
 </body>
+
+<script src="script.js"></script>
+
 </html>
